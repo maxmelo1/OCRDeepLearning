@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.layers.experimental import preprocessing
 from tensorflow.keras.applications import EfficientNetB0, EfficientNetB7, ResNet50V2, ResNet101V2, ResNet152V2, VGG16, VGG19, InceptionResNetV2
 from tensorflow.keras.preprocessing.image import load_img
+from keras.utils.data_utils import get_file
 
 from PIL import Image
 import numpy as np
@@ -16,8 +17,14 @@ IMG_SIZE = 64
 BATCH_SIZE = 32
 NUM_CLASSES = 62
 
+WEIGHTS_PATH = 'https://github.com/maxmelo1/OCRDeepLearning/releases/download/0.1/model_new.h5'
+
 def predict(img_path):
-    model = model = keras.models.load_model('saved/model/model_new.h5')
+    weights_path = get_file(
+            'resnet50v2_ocr_natural_images.h5',
+            WEIGHTS_PATH,
+            cache_subdir='models')
+    model = model = keras.models.load_model(weights_path)
     #model.summary()
 
     # image = Image.open(img_path).convert("RGB")
