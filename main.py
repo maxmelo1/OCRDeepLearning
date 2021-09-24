@@ -13,6 +13,7 @@ IMG_SIZE = 64
 batch_size = 32
 NUM_CLASSES = 62
 
+epochs = 100
 LR = 1e-5
 
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
@@ -131,6 +132,5 @@ model = unfreeze_model(model)
 
 model.summary()
 
-epochs = 100
 hist = model.fit(train_ds, epochs=epochs, validation_data=val_ds, verbose=1, callbacks=[WandbCallback()])
 model.save('saved/model/model_new.h5')
