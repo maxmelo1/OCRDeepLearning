@@ -24,6 +24,7 @@ Dataset contains 7705 images, resized to 64x64. To improve the generalization of
 ResNet 50 (Figure 1) with top layer modified to 62 classes was used. 
 
 ![Resnet50](imgs/resnet.png)
+
 Figure 1: 34 layer ResNet model (on the right). Fonte: [1].
 
 The model is freely available in the repository.
