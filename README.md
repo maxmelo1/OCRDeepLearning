@@ -66,7 +66,11 @@ The available test.py script expects an '-img' parameter which must contain the 
 
 - python test.py -img /Sample008/img008-00019.png
 
-This execution will output 'Sample008', which is the expected class for the considered sample. Keep in mind that 'Sample001' represents the class for the number 0, so 'Sample008' represents the class for the number 7.
+This execution will output 'Sample008', which is the expected class for the considered sample. Keep in mind that 'Sample001' represents the class for the number 0, so 'Sample008' represents the class for the number 7. The result is shown below.
+
+<img src="imgs/predict.png" width=100>
+
+![Predict-result](imgs/predict.png){: height="36px" width="36px"}
 
 ## References
 
